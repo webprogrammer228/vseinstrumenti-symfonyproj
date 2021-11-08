@@ -1,0 +1,2 @@
+#!/bin/bash
+docker exec -ti -u `id -u` vi_school_php_symfony /code/bin/console "$@"

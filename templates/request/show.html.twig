@@ -1,0 +1,27 @@
+{% include 'base.html.twig' %}
+{% block body %}
+    <a href="{{ path('request.list') }}" class="link-primary">К списку</a>
+    <h1>Запрос: {{ request.title }}</h1>
+    <div>
+        <table class="table">
+            <thead>
+            <tbody>
+                <tr scope="col" class="table-primary">
+                    <td>Сообщение</td>
+                    <td>{{ request.message }}</td>
+                </tr>
+                <tr scope="col" class="table-success">
+                    <td>Статус</td>
+                    <td>{{ request.status }}</td>
+                </tr>
+                <tr scope="col" class="table-info">
+                    <td>Дата</td>
+                    <td>{{ request.createAt.format('Y.m.d H:i:s') }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {% block javascripts %}
+
+    {% endblock %}
+{% endblock %}
